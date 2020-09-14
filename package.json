@@ -62,7 +62,7 @@
     "p-filter": "^2.1.0",
     "path-exists": "^4.0.0",
     "read-pkg-up": "^7.0.1",
-    "yargs": "^15.4.1"
+    "yargs": "^16.0.0"
   },
   "devDependencies": {
     "ajv": "^6.12.3",
