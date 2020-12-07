@@ -16,9 +16,9 @@ jobs:
         node-version: [8.3.0, 14]
         exclude:
           - os: macOS-latest
-            node: 8.3.0
+            node-version: 8.3.0
           - os: windows-latest
-            node: 8.3.0
+            node-version: 8.3.0
       fail-fast: false
     runs-on: ${{ matrix.os }}
     steps:
@@ -32,7 +32,7 @@ jobs:
         run: npm install
       - name: Linting
         run: npm run format:ci
-        if: "${{ matrix.node-version == '14.x' }}"
+        if: "${{ matrix.node-version == '14' }}"
       - name: Tests
         run: npm run test:ci
       - name: Get test coverage flags
