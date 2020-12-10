@@ -1,11 +1,10 @@
 const filterObj = require('filter-obj')
 const isPlainObj = require('is-plain-obj')
-const readPkgUp = require('read-pkg-up')
 
 // Find the `package.json` (if there is one) and loads its
 // `dependencies|devDependencies` and `scripts` fields
-const getPackageJsonContent = async function ({ projectDir }) {
-  const { packageJson, packageJsonPath } = await getPackageJson(projectDir)
+const getPackageJsonContent = async function ({ getPackageJson }) {
+  const { packageJson, packageJsonPath } = await getPackageJson()
   if (packageJson === undefined) {
     return { packageJsonPath, npmDependencies: [], scripts: {} }
   }
@@ -13,25 +12,6 @@ const getPackageJsonContent = async function ({ projectDir }) {
   const npmDependencies = getNpmDependencies(packageJson)
   const scripts = getScripts(packageJson)
   return { packageJsonPath, npmDependencies, scripts }
-}
-
-const getPackageJson = async function (projectDir) {
-  try {
-    const result = await readPkgUp({ cwd: projectDir, normalize: false })
-    if (result === undefined) {
-      return {}
-    }
-
-    const { packageJson, path: packageJsonPath } = result
-
-    if (!isPlainObj(packageJson)) {
-      return { packageJsonPath }
-    }
-
-    return { packageJson, packageJsonPath }
-  } catch (error) {
-    return {}
-  }
 }
 
 // Retrieve `package.json` `dependencies` and `devDependencies` names
