@@ -83,10 +83,10 @@ each(FRAMEWORKS, (info, framework) => {
 })
 
 test('each json file should be required in main.js FRAMEWORKS', async (t) => {
-  const dir = path.join(__dirname, '..', 'src', 'frameworks')
+  const dir = `${__dirname}/../src/frameworks`
   const jsonFiles = (await pReadDir(dir)).filter((file) => path.extname(file) === '.json')
 
-  const mainFile = await pReadFile(path.join(dir, 'main.js'), 'utf8')
+  const mainFile = await pReadFile(`${dir}/main.js`, 'utf8')
 
   const missing = jsonFiles.filter((file) => !mainFile.includes(`./${file}`))
   t.deepEqual(missing, [])
