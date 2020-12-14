@@ -41,9 +41,21 @@ const Framework = (framework) => {
 export const App = () => {
   const [frameworks, setFrameworks] = useState([])
 
-  useEffect(async () => {
-    const context = await getContext()
-    setFrameworks(await listFrameworks(context))
+  useEffect(() => {
+    let canceled = false
+
+    const fetchFrameworks = async () => {
+      const context = await getContext()
+      const frameworks = await listFrameworks(context)
+      if (!canceled) {
+        setFrameworks(frameworks)
+      }
+    }
+
+    fetchFrameworks()
+    return () => {
+      canceled = true
+    }
   }, [])
 
   return frameworks.map((framework) => <Framework {...framework} />)
