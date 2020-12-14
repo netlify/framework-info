@@ -18,7 +18,7 @@
     "build": "run-s build:*",
     "build:core": "webpack --config scripts/webpack.config.core.js",
     "build:site-react": "webpack --config scripts/webpack.config.site.js",
-    "build:site-static": "cpy site/vanilla/index.html dist/vanilla",
+    "build:site-vanilla": "cpy site/vanilla/index.html dist/vanilla",
     "build:site-root": "cpy site/index.html dist",
     "develop:site-react": "webpack serve --config scripts/webpack.config.site.js",
     "test": "npm run format && npm run test:dev",
