@@ -18,7 +18,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.jsx'],
+    extensions: ['.js', '.jsx'],
   },
   output: {
     path: outDir,
