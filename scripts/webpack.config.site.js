@@ -1,11 +1,12 @@
 const path = require('path')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const siteDir = path.resolve(`${__dirname}/../site/react`)
 const outDir = path.resolve(`${__dirname}/../dist/react`)
 
 module.exports = {
-  entry: `${siteDir}/index.js`,
+  entry: `${siteDir}/index.jsx`,
   devtool: 'source-map',
   module: {
     rules: [
@@ -17,7 +18,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.jsx'],
   },
   output: {
     path: outDir,

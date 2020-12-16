@@ -70,7 +70,7 @@
   },
   "scriptsArgs": {
     "eslint": "--ignore-path .gitignore --cache --format=codeframe --max-warnings=0 \"src/**/*.js\" \"test/*.js\" \"test/helpers/**/*.js\"",
-    "prettier": "--ignore-path .gitignore --loglevel warn \"{src,test}/**/*.js\" \"*.{js,md,yml,json}\" \"!package-lock.json\" \"!CHANGELOG.md\""
+    "prettier": "--ignore-path .gitignore --loglevel warn \"{src,site,scripts,test}/**/*.js\" \"*.{js,md,yml,json}\" \"!package-lock.json\" \"!CHANGELOG.md\""
   },
   "dependencies": {
     "filter-obj": "^2.0.1",
