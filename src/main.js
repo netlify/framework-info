@@ -29,7 +29,7 @@ const { listFrameworks: list, hasFramework: has, getFramework: get } = require('
  * @returns {Framework[]} frameworks - Frameworks used by a project
  */
 const listFrameworks = async function (opts) {
-  const context = getContext(opts)
+  const context = await getContext(opts)
   return await list(context)
 }
 
@@ -42,7 +42,7 @@ const listFrameworks = async function (opts) {
  * @returns {boolean} result - Whether the project uses this framework
  */
 const hasFramework = async function (frameworkName, options) {
-  const context = getContext(options)
+  const context = await getContext(options)
   return await has(frameworkName, context)
 }
 
@@ -55,7 +55,7 @@ const hasFramework = async function (frameworkName, options) {
  * @returns {Framework} framework - Framework used by a project
  */
 const getFramework = async function (frameworkName, options) {
-  const context = getContext(options)
+  const context = await getContext(options)
   return await get(frameworkName, context)
 }
 

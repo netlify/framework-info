@@ -24,19 +24,16 @@
       const getPackageJson = async () => {
         const { content } = await get('contents/package.json')
         const raw = atob(content)
-        return { packageJson: JSON.parse(raw), packageJsonPath: '' }
+        return JSON.parse(raw)
       }
 
       const getContext = async () => {
-        const repoFiles = await listFiles()
-        const locatePath = (paths) => {
-          const foundPath = paths.find((path) => {
-            const normalizedPath = path.startsWith('./') ? path.slice(2) : path
-            return repoFiles.includes(normalizedPath)
-          })
-          return foundPath
+        const [repoFiles, packageJson] = await Promise.all([listFiles(), getPackageJson()])
+        const pathExists = (path) => {
+          const normalizedPath = path.startsWith('./') ? path.slice(2) : path
+          return repoFiles.includes(normalizedPath)
         }
-        return { projectDir: '.', locatePath, getPackageJson }
+        return { pathExists, packageJson }
       }
 
       const getFrameworks = async () => {

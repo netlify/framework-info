@@ -6,24 +6,24 @@ const { getPackageJsonContent } = require('./package.js')
 const { getRunScriptCommand } = require('./run_script.js')
 const { getWatchCommands } = require('./watch.js')
 
-/**
- * This callback is displayed as a global member.
- * @callback LocatePathCallback
- * @param {string[]} paths
- * @returns {Promise<string>}
- */
+const getContext = (context) => {
+  const { pathExists, packageJson, packageJsonPath = '.' } = context
+
+  return { pathExists, packageJson, packageJsonPath }
+}
 
 /**
- * This callback is displayed as a global member.
- * @callback GetPackageJsonCallback
- * @returns {Promise<string>}
+ * A callback to check if a path exists
+ * @callback PathExists
+ * @param {string} path
+ * @returns {Promise<boolean>}
  */
 
 /**
  * @typedef {object} Context
- * @property {string} projectDir - Project's directory
- * @property {LocatePathCallback} locatePath - Get the first path that exists out of multiple paths
- * @property {GetPackageJsonCallback} getPackageJson - Get the content of package.json
+ * @property {PathExists} pathExists - Checks if a path exists
+ * @property {object} packageJson - Content of package.json
+ * @property {string} [packageJsonPath='.'] - Path of package.json
  */
 
 /**
@@ -49,13 +49,13 @@ const { getWatchCommands } = require('./watch.js')
  * @returns {Framework[]} frameworks - Frameworks used by a project
  */
 const listFrameworks = async function (context) {
-  const { projectDir, locatePath, getPackageJson } = context
+  const { pathExists, packageJson, packageJsonPath } = getContext(context)
   const { npmDependencies, scripts, runScriptCommand } = await getProjectInfo({
-    projectDir,
-    locatePath,
-    getPackageJson,
+    pathExists,
+    packageJson,
+    packageJsonPath,
   })
-  const frameworks = await pFilter(FRAMEWORKS, (framework) => usesFramework(framework, { locatePath, npmDependencies }))
+  const frameworks = await pFilter(FRAMEWORKS, (framework) => usesFramework(framework, { pathExists, npmDependencies }))
   const frameworkInfos = frameworks.map((framework) => getFrameworkInfo(framework, { scripts, runScriptCommand }))
   return frameworkInfos
 }
@@ -70,9 +70,9 @@ const listFrameworks = async function (context) {
  */
 const hasFramework = async function (frameworkName, context) {
   const framework = getFrameworkByName(frameworkName)
-  const { projectDir, locatePath, getPackageJson } = context
-  const { npmDependencies } = await getProjectInfo({ projectDir, locatePath, getPackageJson })
-  const result = await usesFramework(framework, { locatePath, npmDependencies })
+  const { pathExists, packageJson, packageJsonPath } = getContext(context)
+  const { npmDependencies } = await getProjectInfo({ pathExists, packageJson, packageJsonPath })
+  const result = await usesFramework(framework, { pathExists, npmDependencies })
   return result
 }
 
@@ -86,11 +86,11 @@ const hasFramework = async function (frameworkName, context) {
  */
 const getFramework = async function (frameworkName, context) {
   const framework = getFrameworkByName(frameworkName)
-  const { projectDir, locatePath, getPackageJson } = context
+  const { pathExists, packageJson, packageJsonPath } = getContext(context)
   const { scripts, runScriptCommand } = await getProjectInfo({
-    projectDir,
-    locatePath,
-    getPackageJson,
+    pathExists,
+    packageJson,
+    packageJsonPath,
   })
   const frameworkInfo = getFrameworkInfo(framework, { scripts, runScriptCommand })
   return frameworkInfo
@@ -109,11 +109,11 @@ const getFrameworkName = function ({ name }) {
   return name
 }
 
-const getProjectInfo = async function ({ projectDir, locatePath, getPackageJson }) {
-  const { packageJsonPath = projectDir, npmDependencies, scripts } = await getPackageJsonContent({
-    getPackageJson,
+const getProjectInfo = async function ({ pathExists, packageJson, packageJsonPath }) {
+  const { npmDependencies, scripts } = await getPackageJsonContent({
+    packageJson,
   })
-  const runScriptCommand = await getRunScriptCommand({ locatePath, packageJsonPath })
+  const runScriptCommand = await getRunScriptCommand({ pathExists, packageJsonPath })
   return { npmDependencies, scripts, runScriptCommand }
 }
 

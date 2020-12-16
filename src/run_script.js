@@ -1,9 +1,9 @@
 const { dirname } = require('path')
 
 // Retrieve the command to run `package.json` `scripts` commands
-const getRunScriptCommand = async function ({ locatePath, packageJsonPath }) {
-  const exists = (await locatePath([`${dirname(packageJsonPath)}/yarn.lock`])) !== undefined
-  if (exists) {
+const getRunScriptCommand = async function ({ pathExists, packageJsonPath }) {
+  const yarnExists = await pathExists(`${dirname(packageJsonPath)}/yarn.lock`)
+  if (yarnExists) {
     return 'yarn'
   }
 
