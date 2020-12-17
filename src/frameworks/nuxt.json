@@ -8,8 +8,11 @@
   },
   "watch": {
     "command": "nuxt",
-    "directory": "dist",
     "port": 3000
+  },
+  "build": {
+    "command": "nuxt generate",
+    "directory": "dist"
   },
   "env": {}
 }
