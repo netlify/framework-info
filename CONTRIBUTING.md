@@ -11,8 +11,8 @@ Contributions are always welcome, no matter how large or small. Before contribut
 git clone git@github.com:netlify/framework-info.git
 cd framework-info
 npm install
-npm test
 npm run build
+npm test
 ```
 
 You can also use yarn.
