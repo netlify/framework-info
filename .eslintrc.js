@@ -6,7 +6,11 @@ module.exports = {
     ...overrides,
     {
       files: ['*.jsx'],
-      extends: ['eslint:recommended', 'plugin:react/recommended'],
+      extends: '@netlify/eslint-config-node/react_config',
+    },
+    {
+      files: ['*.html'],
+      extends: '@netlify/eslint-config-node/vanilla_js_config',
     },
   ],
 }
