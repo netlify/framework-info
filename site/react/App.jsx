@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-// eslint-disable-next-line import/extensions, import/no-unresolved, node/no-missing-import
-import { listFrameworks } from '../../dist'
+import { listFrameworks } from '../../dist/index.js'
 
 const repo = 'netlify-templates/gatsby-starter-netlify-cms'
 

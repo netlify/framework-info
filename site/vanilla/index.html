@@ -37,7 +37,6 @@
 
       const getFrameworks = async () => {
         const context = await getContext()
-        // eslint-disable-next-line no-undef
         const frameworks = await frameworkInfo.listFrameworks(context)
         return frameworks
       }

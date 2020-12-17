@@ -33,6 +33,8 @@ jobs:
       - name: Linting
         run: npm run format:ci
         if: "${{ matrix.node-version == '14' }}"
+      - name: Build For Browser
+        run: npm run build
       - name: Tests
         run: npm run test:ci
       - name: Get test coverage flags
