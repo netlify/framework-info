@@ -20,8 +20,12 @@ const getScriptWatchCommands = function (scripts, frameworkWatchCommand) {
     return preferredScripts
   }
 
-  return Object.keys(scripts).filter(isNpmWatchScript)
+  const watchScripts = Object.keys(scripts).filter(isNpmWatchScript)
+  // eslint-disable-next-line fp/no-mutating-methods
+  return watchScripts.sort(scriptsSorter)
 }
+
+const scriptsSorter = (script1, script2) => NPM_WATCH_SCRIPTS.indexOf(script1) - NPM_WATCH_SCRIPTS.indexOf(script2)
 
 const getPreferredScripts = function (scripts, frameworkWatchCommand) {
   return Object.entries(scripts)
