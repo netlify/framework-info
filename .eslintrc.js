@@ -7,9 +7,6 @@ module.exports = {
     {
       files: ['*.jsx'],
       extends: '@netlify/eslint-config-node/react_config',
-      rules: {
-        'unicorn/import-index': 0,
-      },
     },
     {
       files: ['*.html'],
