@@ -36,3 +36,11 @@ test('Should return the same result when script order is different', async (t) =
   t.deepEqual(frameworksBuildFirst[0].watch.commands, ['npm run dev', 'npm run start', 'npm run build'])
   t.deepEqual(frameworksBuildFirst, frameworksDevFirst)
 })
+
+test('Should sort scripts in the format *:<name>', async (t) => {
+  const frameworks = await getFrameworks('scripts-order/postfix-format')
+
+  t.is(frameworks.length, 1)
+
+  t.deepEqual(frameworks[0].watch.commands, ['npm run site:dev', 'npm run site:start', 'npm run site:build'])
+})

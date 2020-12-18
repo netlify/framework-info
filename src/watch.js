@@ -25,7 +25,12 @@ const getScriptWatchCommands = function (scripts, frameworkWatchCommand) {
   return watchScripts.sort(scriptsSorter)
 }
 
-const scriptsSorter = (script1, script2) => NPM_WATCH_SCRIPTS.indexOf(script1) - NPM_WATCH_SCRIPTS.indexOf(script2)
+const scriptsSorter = (script1, script2) => {
+  const index1 = NPM_WATCH_SCRIPTS.findIndex((watchScriptName) => matchesNpmWatchScript(script1, watchScriptName))
+  const index2 = NPM_WATCH_SCRIPTS.findIndex((watchScriptName) => matchesNpmWatchScript(script2, watchScriptName))
+
+  return index1 - index2
+}
 
 const getPreferredScripts = function (scripts, frameworkWatchCommand) {
   return Object.entries(scripts)
