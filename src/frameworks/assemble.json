@@ -1,0 +1,15 @@
+{
+  "name": "assemble",
+  "category": "static_site_generator",
+  "detect": {
+    "npmDependencies": ["assemble"],
+    "excludedNpmDependencies": [],
+    "configFiles": []
+  },
+  "watch": {},
+  "build": {
+    "command": "grunt build",
+    "directory": "dist"
+  },
+  "env": {}
+}

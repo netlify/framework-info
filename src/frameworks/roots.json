@@ -1,0 +1,18 @@
+{
+  "name": "roots",
+  "category": "static_site_generator",
+  "detect": {
+    "npmDependencies": ["roots"],
+    "excludedNpmDependencies": [],
+    "configFiles": []
+  },
+  "watch": {
+    "command": "roots watch",
+    "port": 1111
+  },
+  "build": {
+    "command": "roots compile",
+    "directory": "public"
+  },
+  "env": {}
+}
