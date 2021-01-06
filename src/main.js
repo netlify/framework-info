@@ -8,7 +8,7 @@ const { listFrameworks: list, hasFramework: has, getFramework: get } = require('
 
 /**
  * @typedef {object} Watch
- * @property {string} commands - Watch command. There might be several alternatives
+ * @property {string} commands - Watch command. There might be several alternatives or empty
  * @property {number} port - Server port
  */
 
