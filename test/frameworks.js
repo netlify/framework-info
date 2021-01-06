@@ -29,10 +29,15 @@ const RELATIVE_PATH_SCHEMA = {
   allOf: [{ not: { pattern: '^/' } }, { not: { pattern: '^\\.\\.?\\/' } }],
 }
 
+const COMMAND_SCHEMA = {
+  type: 'string',
+  minLength: 1,
+}
+
 const MAX_PORT = 65535
 const FRAMEWORK_JSON_SCHEMA = {
   type: 'object',
-  required: ['name', 'category', 'detect', 'watch', 'env'],
+  required: ['name', 'category', 'detect', 'watch', 'build', 'env'],
   additionalProperties: false,
   properties: {
     name: { type: 'string', pattern: '^[a-z\\d_]+', minLength: 1 },
@@ -60,13 +65,30 @@ const FRAMEWORK_JSON_SCHEMA = {
       },
     },
     watch: {
+      oneOf: [
+        {
+          type: 'object',
+          required: ['command', 'port'],
+          additionalProperties: false,
+          properties: {
+            command: COMMAND_SCHEMA,
+            port: { type: 'integer', minimum: 1, maximum: MAX_PORT },
+          },
+        },
+        {
+          type: 'object',
+          additionalProperties: false,
+          properties: {},
+        },
+      ],
+    },
+    build: {
       type: 'object',
-      required: ['command', 'directory', 'port'],
+      required: ['command', 'directory'],
       additionalProperties: false,
       properties: {
-        command: { type: 'string', minLength: 1 },
+        command: COMMAND_SCHEMA,
         directory: RELATIVE_PATH_SCHEMA,
-        port: { type: 'integer', minimum: 1, maximum: MAX_PORT },
       },
     },
     env: {
