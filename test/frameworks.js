@@ -65,22 +65,13 @@ const FRAMEWORK_JSON_SCHEMA = {
       },
     },
     watch: {
-      oneOf: [
-        {
-          type: 'object',
-          required: ['command', 'port'],
-          additionalProperties: false,
-          properties: {
-            command: COMMAND_SCHEMA,
-            port: { type: 'integer', minimum: 1, maximum: MAX_PORT },
-          },
-        },
-        {
-          type: 'object',
-          additionalProperties: false,
-          properties: {},
-        },
-      ],
+      type: 'object',
+      dependencies: { command: ['port'], port: ['command'] },
+      additionalProperties: false,
+      properties: {
+        command: COMMAND_SCHEMA,
+        port: { type: 'integer', minimum: 1, maximum: MAX_PORT },
+      },
     },
     build: {
       type: 'object',
