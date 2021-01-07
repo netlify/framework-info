@@ -7,11 +7,11 @@
     "configFiles": [".eleventy.js"]
   },
   "watch": {
-    "command": "npx @11ty/eleventy --watch",
+    "command": "eleventy --serve",
     "port": 8080
   },
   "build": {
-    "command": "npx @11ty/eleventy",
+    "command": "eleventy",
     "directory": "_site"
   },
   "env": {}
