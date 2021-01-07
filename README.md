@@ -11,9 +11,9 @@ also returned.
 The following frameworks are detected:
 
 - Static site generators: Gatsby, Hugo, Jekyll, Next.js, Nuxt, Hexo, Gridsome, Docusaurus, Eleventy, Middleman,
-  Phenomic, React-static, Stencil, Vuepress
+  Phenomic, React-static, Stencil, Vuepress, Assemble, DocPad, Harp, Metalsmith, Roots, Wintersmith
 - Front-end frameworks: create-react-app, Vue, Sapper, Angular, Ember, Svelte, Expo, Quasar
-- Build tools: Parcel, Brunch
+- Build tools: Parcel, Brunch, Grunt, Gulp
 
 [Additions and updates are welcome!](#add-or-update-a-framework)
 
