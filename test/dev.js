@@ -45,7 +45,7 @@ test('Should sort scripts in the format *:<name>', async (t) => {
   t.deepEqual(frameworks[0].dev.commands, ['npm run site:dev', 'npm run site:start', 'npm run site:build'])
 })
 
-test('Should sort scripts when dev command is substring of build command', async (t) => {
+test('Should sort scripts when dev command is a substring of build command', async (t) => {
   const frameworks = await getFrameworks('scripts-order/command-substring')
 
   t.is(frameworks.length, 1)
