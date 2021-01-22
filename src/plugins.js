@@ -2,7 +2,7 @@ const Ajv = require('ajv').default
 const semver = require('semver')
 
 const MIN_NODE_VERSION_KEYWORD = {
-  keyword: 'min_node_version',
+  keyword: 'minNodeVersion',
   validate: (minNodeVersion, { nodeVersion }) =>
     semver.valid(minNodeVersion) && semver.valid(nodeVersion) && semver.gte(nodeVersion, minNodeVersion),
 }

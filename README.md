@@ -350,7 +350,7 @@ For example
   "plugins": [
     {
       "packageName": "@netlify/plugin-nextjs",
-      "condition": { "min_node_version": "10.13.0" }
+      "condition": { "minNodeVersion": "10.13.0" }
     }
   ]
 }
