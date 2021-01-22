@@ -34,6 +34,16 @@ const COMMAND_SCHEMA = {
   minLength: 1,
 }
 
+const PLUGIN_SCHEMA = {
+  type: 'object',
+  required: ['packageName', 'schema'],
+  additionalProperties: false,
+  properties: {
+    packageName: { type: 'string', minLength: 1 },
+    schema: { type: 'object' },
+  },
+}
+
 const MAX_PORT = 65535
 const FRAMEWORK_JSON_SCHEMA = {
   type: 'object',
@@ -85,6 +95,10 @@ const FRAMEWORK_JSON_SCHEMA = {
     env: {
       type: 'object',
       additionalProperties: { type: 'string' },
+    },
+    plugins: {
+      type: 'array',
+      items: PLUGIN_SCHEMA,
     },
   },
 }

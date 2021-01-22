@@ -14,5 +14,11 @@
     "command": "next build",
     "directory": "out"
   },
-  "env": {}
+  "env": {},
+  "plugins": [
+    {
+      "packageName": "@netlify/plugin-nextjs",
+      "schema": { "min_node_version": "10.13.0" }
+    }
+  ]
 }
