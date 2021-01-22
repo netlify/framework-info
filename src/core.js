@@ -25,6 +25,7 @@ const getContext = (context) => {
  * @property {PathExists} pathExists - Checks if a path exists
  * @property {object} packageJson - Content of package.json
  * @property {string} [packageJsonPath='.'] - Path of package.json
+ * @property {nodeVersion} [nodeVersion] - Node.js version of the runtime environment. Used to recommend Netlify build plugins
  */
 
 /**
