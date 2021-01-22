@@ -36,11 +36,11 @@ const COMMAND_SCHEMA = {
 
 const PLUGIN_SCHEMA = {
   type: 'object',
-  required: ['packageName', 'schema'],
+  required: ['packageName', 'condition'],
   additionalProperties: false,
   properties: {
     packageName: { type: 'string', minLength: 1 },
-    schema: { type: 'object' },
+    condition: { type: 'object' },
   },
 }
 

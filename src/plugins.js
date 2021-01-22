@@ -11,7 +11,9 @@ const getPlugins = function (plugins, { nodeVersion }) {
   const ajv = new Ajv({})
   ajv.addKeyword(MIN_NODE_VERSION_KEYWORD)
 
-  return plugins.filter(({ schema }) => ajv.validate(schema, { nodeVersion })).map(({ packageName }) => packageName)
+  return plugins
+    .filter(({ condition }) => ajv.validate(condition, { nodeVersion }))
+    .map(({ packageName }) => packageName)
 }
 
 module.exports = { getPlugins }
