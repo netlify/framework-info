@@ -7,10 +7,10 @@ const MIN_NODE_VERSION_KEYWORD = {
     semver.valid(minNodeVersion) && semver.valid(nodeVersion) && semver.gte(nodeVersion, minNodeVersion),
 }
 
-const getPlugins = function (plugins, { nodeVersion }) {
-  const ajv = new Ajv({})
-  ajv.addKeyword(MIN_NODE_VERSION_KEYWORD)
+const ajv = new Ajv({})
+ajv.addKeyword(MIN_NODE_VERSION_KEYWORD)
 
+const getPlugins = function (plugins, { nodeVersion }) {
   return plugins
     .filter(({ condition }) => ajv.validate(condition, { nodeVersion }))
     .map(({ packageName }) => packageName)
