@@ -2,6 +2,7 @@ const http = require('http')
 const process = require('process')
 
 const execa = require('execa')
+const isCI = require('is-ci')
 const nodeStatic = require('node-static')
 const puppeteer = require('puppeteer')
 
@@ -10,11 +11,6 @@ const versions = [
     // Chromium 90
     product: 'chrome',
     version: '856583',
-  },
-  {
-    // Chromium 66
-    product: 'chrome',
-    version: '533271',
   },
   {
     product: 'firefox',
@@ -51,7 +47,9 @@ const runCypress = async (version) => {
   const folder = `${version.product}-${version.version}`
   const config = `baseUrl=http://localhost:8080,videosFolder=cypress/videos/${folder},screenshotsFolder=cypress/screenshots/${folder}`
 
-  await execa('cypress', ['run', '--browser', browserPath, '--config', config], {
+  const additionalArgs = isCI ? ['--headless'] : []
+
+  await execa('cypress', ['run', '--browser', browserPath, '--config', config, ...additionalArgs], {
     stdio: 'inherit',
     preferLocal: true,
   })
