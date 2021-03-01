@@ -13,11 +13,7 @@ const versions = [
     version: '856583',
   },
   {
-    product: 'firefox',
-    version: '88.0a1',
-    host: 'https://archive.mozilla.org/pub/firefox/nightly/2021/02/2021-02-28-10-37-09-mozilla-central',
-  },
-  {
+    // Old Firefox
     product: 'firefox',
     version: '63.0a1',
     host: 'https://archive.mozilla.org/pub/firefox/nightly/2018/06/2018-06-30-22-02-40-mozilla-central',
@@ -72,7 +68,16 @@ const runSpecs = async () => {
 
   server.close()
 
-  process.exitCode = errors.length === 0 ? 0 : 1
+  if (errors.length === 0) {
+    process.exitCode = 0
+  } else {
+    // eslint-disable-next-line fp/no-loops
+    for (const error of errors) {
+      console.error(error)
+    }
+
+    process.exitCode = 1
+  }
 }
 
 runSpecs()
