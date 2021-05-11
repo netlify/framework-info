@@ -13,7 +13,7 @@
     "pollingStrategies": [{ "name": "TCP" }]
   },
   "build": {
-    "command": "blitz buildd",
+    "command": "blitz build",
     "directory": "out"
   },
   "env": {},
