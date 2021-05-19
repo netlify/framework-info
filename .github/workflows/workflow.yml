@@ -81,7 +81,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         if: always()
         with:
-          name: cypress-results-node-os-${{ matrix.os }}
+          name: cypress-results
           path: |
             cypress/screenshots
             cypress/videos
