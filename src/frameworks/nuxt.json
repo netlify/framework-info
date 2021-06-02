@@ -16,8 +16,6 @@
     "command": "nuxt generate",
     "directory": "dist"
   },
-  "env": {
-    "NODE_VERSION": "14"
-  },
+  "env": {},
   "plugins": []
 }
