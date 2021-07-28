@@ -3,6 +3,7 @@
 // is always first, if several frameworks are detected at once
 const FRAMEWORKS = [
   // Static site generators
+  require('./astro.json'),
   require('./docusaurus.json'),
   require('./docusaurus-v2.json'),
   require('./eleventy.json'),
@@ -12,6 +13,7 @@ const FRAMEWORKS = [
   require('./hugo.json'),
   require('./jekyll.json'),
   require('./middleman.json'),
+  require('./next-nx.json'),
   require('./next.json'),
   require('./blitz.json'),
   require('./nuxt.json'),
@@ -26,6 +28,8 @@ const FRAMEWORKS = [
   require('./metalsmith.json'),
   require('./roots.json'),
   require('./wintersmith.json'),
+  require('./cecil.json'),
+  require('./zola.json'),
 
   // Front-end frameworks
   require('./angular.json'),
@@ -36,6 +40,7 @@ const FRAMEWORKS = [
   require('./quasar-v0.17.json'),
   require('./sapper.json'),
   require('./svelte.json'),
+  require('./svelte-kit.json'),
   require('./vue.json'),
 
   // Build tools
@@ -44,6 +49,7 @@ const FRAMEWORKS = [
   require('./grunt.json'),
   require('./gulp.json'),
   require('./vite.json'),
+  require('./wmr.json'),
 ]
 
 /* eslint-enable node/global-require,import/max-dependencies */
