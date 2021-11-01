@@ -12,7 +12,7 @@ The following frameworks are detected:
 
 - Static site generators: Gatsby, Hugo, Jekyll, Next.js, Nuxt, Hexo, Gridsome, Docusaurus, Eleventy, Middleman,
   Phenomic, React-static, Stencil, Vuepress, Assemble, DocPad, Harp, Metalsmith, Roots, Wintersmith
-- Front-end frameworks: create-react-app, Vue, Sapper, Angular, Ember, Svelte, Expo, Quasar
+- Front-end frameworks: create-react-app, Vue, SvelteKit, Sapper, Angular, Ember, Svelte, Expo, Quasar
 - Build tools: Parcel, Brunch, Grunt, Gulp
 
 If you're looking for a way to run `framework-info` via CLI check the
