@@ -6,5 +6,6 @@ coverage
 .vscode
 dist
 build
+cypress/support
 cypress/videos
 cypress/screenshots
