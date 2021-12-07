@@ -4,12 +4,12 @@
   "description": "Framework detection utility",
   "type": "module",
   "exports": {
-    "browser": "./dist/index.js",
+    "browser": "./dist/index.cjs",
     "node": "./src/main.js"
   },
   "main": "./src/main.js",
   "files": [
-    "dist/index.js",
+    "dist/index.cjs",
     "build/*.js",
     "src/**/*.js"
   ],

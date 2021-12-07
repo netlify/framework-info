@@ -14,13 +14,10 @@ const webpackConfig = {
   devtool: 'source-map',
   output: {
     path: DIST_DIR,
-    filename: 'index.js',
-    library: {
-      type: 'module',
-    },
-  },
-  experiments: {
-    outputModule: true,
+    filename: 'index.cjs',
+    library: 'frameworkInfo',
+    libraryTarget: 'umd',
+    globalObject: 'this',
   },
   resolve: {
     fallback: { path: PATH_BROWSERIFY_PATH },
