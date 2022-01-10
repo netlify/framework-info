@@ -14,7 +14,6 @@
     "command": "remix build",
     "directory": "public"
   },
-  "staticAssetsDirectory": "public",
   "env": {},
   "plugins": []
 }
