@@ -8,9 +8,7 @@
     "configFiles": ["remix.config.mjs"]
   },
   "dev": {
-    "command": "remix watch # needs to also start the static server",
-    "port": 8888,
-    "pollingStrategies": [{ "name": "TCP" }, { "name": "HTTP" }]
+    "command": "remix watch"
   },
   "build": {
     "command": "remix build",
