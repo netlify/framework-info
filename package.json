@@ -1,6 +1,6 @@
 {
   "name": "@netlify/framework-info",
-  "version": "8.0.2",
+  "version": "7.0.0-rc-4",
   "description": "Framework detection utility",
   "type": "module",
   "main": "./src/main.js",
