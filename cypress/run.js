@@ -10,16 +10,15 @@ import puppeteer from 'puppeteer'
 const DIST_DIR = fileURLToPath(new URL('../dist', import.meta.url))
 
 const versions = [
+  // Chromium 90
   {
-    // Chromium 90
     product: 'chrome',
     version: '856583',
   },
+  // Firefox 97
   {
-    // Old Firefox
     product: 'firefox',
-    version: '63.0a1',
-    host: 'https://archive.mozilla.org/pub/firefox/nightly/2018/06/2018-06-30-22-02-40-mozilla-central',
+    version: '97',
   },
 ]
 
