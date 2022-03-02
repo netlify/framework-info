@@ -122,6 +122,7 @@
     "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
   },
   "ava": {
-    "verbose": true
+    "verbose": true,
+    "workerThreads": false
   }
 }
