@@ -100,7 +100,7 @@
     "is-ci": "^3.0.0",
     "node-static": "^0.7.11",
     "path-browserify": "^1.0.1",
-    "puppeteer": "^13.0.0",
+    "puppeteer": "^14.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "test-each": "^4.0.0",
