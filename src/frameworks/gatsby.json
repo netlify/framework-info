@@ -23,6 +23,11 @@
     "AWS_LAMBDA_JS_RUNTIME": "nodejs14.x",
     "NODE_VERSION": "14"
   },
+  "logos": {
+    "default": "Gatsby_Default.svg",
+    "light": "Gatsby_Black.svg",
+    "dark": "Gatsby_White.svg"
+  },
   "plugins": [
     {
       "packageName": "@netlify/plugin-gatsby",
