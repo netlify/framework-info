@@ -96,10 +96,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "test-each": "^4.0.0",
-    "tmp-promise": "^3.0.2",
-    "webpack": "^5.10.1",
-    "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^4.0.0"
+    "tmp-promise": "^3.0.2"
   },
   "browserslist": [
     "last 2 Chrome versions",
