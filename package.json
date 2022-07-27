@@ -3,26 +3,18 @@
   "version": "9.1.1",
   "description": "Framework detection utility",
   "type": "module",
-  "main": "./dist/index.cjs",
   "exports": {
-    "node": "./src/main.js",
-    "default": "./dist/index.cjs"
+    "node": "./src/main.js"
   },
   "files": [
     "build/*.js",
-    "src/**/*.js",
-    "dist/index.cjs"
+    "src/**/*.js"
   ],
   "scripts": {
     "prepare": "husky install node_modules/@netlify/eslint-config-node/.husky/",
     "prepublishOnly": "npm ci && run-s build test",
     "build": "run-s build:*",
     "build:json": "node scripts/transform_json.js",
-    "build:browser": "run-s build:browser:*",
-    "build:browser:core": "webpack --config scripts/webpack.config.core.js",
-    "build:browser:site-react": "webpack --config scripts/webpack.config.site.js",
-    "build:browser:site-root": "cpy --cwd=site index.html ../dist",
-    "develop:site-react": "webpack serve --config scripts/webpack.config.site.js",
     "test": "npm run format && npm run test:dev",
     "format": "run-s format:check-fix:*",
     "format:ci": "run-s format:check:*",

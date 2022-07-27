@@ -118,7 +118,7 @@ const FRAMEWORK_JSON_SCHEMA = {
       type: 'object',
       additionalProperties: { type: 'string' },
     },
-    logos: {
+    logo: {
       type: 'object',
       additionalProperties: false,
       properties: {
