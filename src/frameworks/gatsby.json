@@ -24,9 +24,9 @@
     "NODE_VERSION": "14"
   },
   "logo": {
-    "default": "default.svg",
-    "light": "light.svg",
-    "dark": "dark.svg"
+    "default": "https://framework-info.netlify.app/logos/gatsby/default.svg",
+    "light": "https://framework-info.netlify.app/logos/gatsby/light.svg",
+    "dark": "https://framework-info.netlify.app/logos/gatsby/dark.svg"
   },
   "plugins": [
     {
