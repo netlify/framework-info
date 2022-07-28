@@ -3,18 +3,24 @@
   "version": "9.1.1",
   "description": "Framework detection utility",
   "type": "module",
+  "main": "./dist/index.cjs",
   "exports": {
-    "node": "./src/main.js"
+    "node": "./src/main.js",
+    "default": "./dist/index.cjs"
   },
   "files": [
     "build/*.js",
-    "src/**/*.js"
+    "src/**/*.js",
+    "dist/index.cjs"
   ],
   "scripts": {
     "prepare": "husky install node_modules/@netlify/eslint-config-node/.husky/",
     "prepublishOnly": "npm ci && run-s build test",
     "build": "run-s build:*",
     "build:json": "node scripts/transform_json.js",
+    "build:browser": "run-s build:browser:*",
+    "build:browser:core": "webpack --config scripts/webpack.config.core.js",
+    "build:browser:site-root": "cpy index.html ../dist",
     "test": "npm run format && npm run test:dev",
     "format": "run-s format:check-fix:*",
     "format:ci": "run-s format:check:*",
@@ -82,8 +88,10 @@
     "del": "^6.0.0",
     "html-webpack-plugin": "^5.0.0",
     "husky": "^7.0.4",
+    "path-browserify": "^1.0.1",
     "test-each": "^4.0.0",
-    "tmp-promise": "^3.0.2"
+    "tmp-promise": "^3.0.2",
+    "webpack-cli": "^4.10.0"
   },
   "engines": {
     "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
