@@ -17,9 +17,9 @@
     "directory": "www"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/stencil/default.png",
-    "light": "https://framework-info.netlify.app/logos/stencil/default.png",
-    "dark": "https://framework-info.netlify.app/logos/stencil/default.png"
+    "default": "https://framework-info.netlify.app/logos/stencil/light.png",
+    "light": "https://framework-info.netlify.app/logos/stencil/light.png",
+    "dark": "https://framework-info.netlify.app/logos/stencil/dark.png"
   },
   "env": { "BROWSER": "none", "PORT": "3000" },
   "plugins": []
