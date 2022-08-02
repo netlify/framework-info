@@ -16,6 +16,11 @@
     "command": "wintersmith build",
     "directory": "build"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/wintersmith/default.svg",
+    "light": "https://framework-info.netlify.app/logos/wintersmith/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/wintersmith/default.svg"
+  },
   "env": {},
   "plugins": []
 }

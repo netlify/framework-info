@@ -17,6 +17,11 @@
     "directory": "build"
   },
   "staticAssetsDirectory": "public",
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/create-react-app/default.svg",
+    "light": "https://framework-info.netlify.app/logos/create-react-app/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/create-react-app/default.svg"
+  },
   "env": { "BROWSER": "none", "PORT": "3000" },
   "plugins": []
 }

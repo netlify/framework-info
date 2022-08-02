@@ -13,5 +13,10 @@
     "directory": "dist"
   },
   "env": {},
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/assemble/default.svg",
+    "light": "https://framework-info.netlify.app/logos/assemble/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/assemble/default.svg"
+  },
   "plugins": []
 }

@@ -12,6 +12,11 @@
     "command": "metalsmith",
     "directory": "build"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/metalsmith/default.svg",
+    "light": "https://framework-info.netlify.app/logos/metalsmith/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/metalsmith/default.svg"
+  },
   "env": {},
   "plugins": []
 }

@@ -16,6 +16,11 @@
     "command": "bundle exec jekyll build",
     "directory": "_site"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/jekyll/dark.svg",
+    "light": "https://framework-info.netlify.app/logos/jekyll/light.svg",
+    "dark": "https://framework-info.netlify.app/logos/jekyll/dark.svg"
+  },
   "env": {},
   "plugins": []
 }

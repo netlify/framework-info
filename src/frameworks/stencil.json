@@ -16,6 +16,11 @@
     "command": "stencil build",
     "directory": "www"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/stencil/default.png",
+    "light": "https://framework-info.netlify.app/logos/stencil/default.png",
+    "dark": "https://framework-info.netlify.app/logos/stencil/default.png"
+  },
   "env": { "BROWSER": "none", "PORT": "3000" },
   "plugins": []
 }

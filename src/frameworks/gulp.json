@@ -12,6 +12,11 @@
     "command": "gulp build",
     "directory": "dist"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/gulp/default.svg",
+    "light": "https://framework-info.netlify.app/logos/gulp/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/gulp/default.svg"
+  },
   "env": {},
   "plugins": []
 }

@@ -16,6 +16,11 @@
     "command": "vue-cli-service build",
     "directory": "dist"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/vue/default.svg",
+    "light": "https://framework-info.netlify.app/logos/vue/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/vue/default.svg"
+  },
   "env": {},
   "plugins": []
 }

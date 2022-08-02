@@ -17,5 +17,10 @@
     "directory": "_site"
   },
   "env": {},
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/cecil/default.svg",
+    "light": "https://framework-info.netlify.app/logos/cecil/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/cecil/default.svg"
+  },
   "plugins": []
 }

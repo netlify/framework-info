@@ -16,6 +16,11 @@
     "command": "npm run build",
     "directory": "public"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/svelte-kit/default.svg",
+    "light": "https://framework-info.netlify.app/logos/svelte-kit/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/svelte-kit/default.svg"
+  },
   "env": {},
   "plugins": []
 }

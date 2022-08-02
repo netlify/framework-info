@@ -16,6 +16,11 @@
     "command": "harp compile",
     "directory": "www"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/harp/default.svg",
+    "light": "https://framework-info.netlify.app/logos/harp/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/harp/default.svg"
+  },
   "env": {},
   "plugins": []
 }

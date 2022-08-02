@@ -16,6 +16,11 @@
     "command": "roots compile",
     "directory": "public"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/roots/default.svg",
+    "light": "https://framework-info.netlify.app/logos/roots/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/roots/default.svg"
+  },
   "env": {},
   "plugins": []
 }

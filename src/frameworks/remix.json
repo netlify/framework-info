@@ -14,6 +14,11 @@
     "command": "remix build",
     "directory": "public"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/hugo/default.svg",
+    "light": "https://framework-info.netlify.app/logos/hugo/light.svg",
+    "dark": "https://framework-info.netlify.app/logos/hugo/dark.svg"
+  },
   "env": {},
   "plugins": []
 }

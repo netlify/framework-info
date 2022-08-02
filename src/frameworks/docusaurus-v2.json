@@ -17,6 +17,11 @@
     "directory": "build"
   },
   "staticAssetsDirectory": "static",
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/docusaurus/default.svg",
+    "light": "https://framework-info.netlify.app/logos/docusaurus/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/docusaurus/default.svg"
+  },
   "env": { "BROWSER": "none" },
   "plugins": []
 }

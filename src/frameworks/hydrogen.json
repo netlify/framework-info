@@ -16,6 +16,11 @@
     "command": "npm run build",
     "directory": "dist/client"
   },
+  "logo": {
+    "default": "https://framework-info.netlify.app/logos/hydrogen/default.svg",
+    "light": "https://framework-info.netlify.app/logos/hydrogen/default.svg",
+    "dark": "https://framework-info.netlify.app/logos/hydrogen/default.svg"
+  },
   "env": {},
   "plugins": []
 }
