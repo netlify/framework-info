@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs'
+import process from 'process'
 
 import { FRAMEWORK_NAMES } from '../src/frameworks/main.js'
 
@@ -19,14 +20,15 @@ const transformFrameworks = async function () {
 }
 
 const updateLogoUrls = function (contents) {
-  const originalLogo = contents['logo']
+  const updatedContents = contents
+  const originalLogo = contents.logo
   if (originalLogo) {
     for (const [theme, urlPath] of Object.entries(originalLogo)) {
-      contents['logo'][theme] = (process.env.DEPLOY_PRIME_URL || 'https://framework-info.netlify.app') + urlPath
+      updatedContents.logo[theme] = (process.env.DEPLOY_PRIME_URL || 'https://framework-info.netlify.app') + urlPath
     }
   }
 
-  return contents
+  return updatedContents
 }
 
 const transformFramework = async function (frameworkName) {
