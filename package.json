@@ -91,7 +91,8 @@
     "path-browserify": "^1.0.1",
     "test-each": "^4.0.0",
     "tmp-promise": "^3.0.2",
-    "webpack-cli": "^4.10.0"
+    "webpack": "^5.10.1",
+    "webpack-cli": "^4.2.0"
   },
   "engines": {
     "node": "^12.20.0 || ^14.14.0 || >=16.0.0"
