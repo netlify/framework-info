@@ -17,9 +17,9 @@
     "directory": "build"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/svelte-kit/default.svg",
-    "light": "https://framework-info.netlify.app/logos/svelte-kit/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/svelte-kit/default.svg"
+    "default": "/logos/svelte-kit/default.svg",
+    "light": "/logos/svelte-kit/default.svg",
+    "dark": "/logos/svelte-kit/default.svg"
   },
   "staticAssetsDirectory": "static",
   "env": {},

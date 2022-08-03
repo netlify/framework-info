@@ -26,9 +26,9 @@
   },
   "staticAssetsDirectory": "public",
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/redwoodjs/default.svg",
-    "light": "https://framework-info.netlify.app/logos/redwoodjs/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/redwoodjs/default.svg"
+    "default": "/logos/redwoodjs/default.svg",
+    "light": "/logos/redwoodjs/default.svg",
+    "dark": "/logos/redwoodjs/default.svg"
   },
   "env": {},
   "plugins": []

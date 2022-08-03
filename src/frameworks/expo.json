@@ -17,9 +17,9 @@
     "directory": "web-build"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/expo/default.svg",
-    "light": "https://framework-info.netlify.app/logos/expo/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/expo/dark.svg"
+    "default": "/logos/expo/default.svg",
+    "light": "/logos/expo/light.svg",
+    "dark": "/logos/expo/dark.svg"
   },
   "env": {},
   "plugins": []

@@ -17,9 +17,9 @@
     "directory": "public"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/hexo/default.svg",
-    "light": "https://framework-info.netlify.app/logos/hexo/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/hexo/dark.svg"
+    "default": "/logos/hexo/default.svg",
+    "light": "/logos/hexo/light.svg",
+    "dark": "/logos/hexo/dark.svg"
   },
   "env": {},
   "plugins": []

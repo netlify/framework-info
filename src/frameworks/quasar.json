@@ -17,9 +17,9 @@
     "directory": "dist/spa"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/quasar/default.svg",
-    "light": "https://framework-info.netlify.app/logos/quasar/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/quasar/default.svg"
+    "default": "/logos/quasar/default.svg",
+    "light": "/logos/quasar/default.svg",
+    "dark": "/logos/quasar/default.svg"
   },
   "env": {},
   "plugins": []

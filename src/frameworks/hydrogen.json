@@ -17,9 +17,9 @@
     "directory": "dist/client"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/hydrogen/default.svg",
-    "light": "https://framework-info.netlify.app/logos/hydrogen/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/hydrogen/default.svg"
+    "default": "/logos/hydrogen/default.svg",
+    "light": "/logos/hydrogen/default.svg",
+    "dark": "/logos/hydrogen/default.svg"
   },
   "env": {},
   "plugins": []

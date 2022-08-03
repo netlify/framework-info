@@ -17,9 +17,9 @@
     "directory": "build"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/middleman/default.svg",
-    "light": "https://framework-info.netlify.app/logos/middleman/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/middleman/default.svg"
+    "default": "/logos/middleman/default.svg",
+    "light": "/logos/middleman/default.svg",
+    "dark": "/logos/middleman/default.svg"
   },
   "env": {},
   "plugins": []

@@ -17,9 +17,9 @@
     "directory": "_site"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/eleventy/default.svg",
-    "light": "https://framework-info.netlify.app/logos/eleventy/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/eleventy/default.svg"
+    "default": "/logos/eleventy/default.svg",
+    "light": "/logos/eleventy/default.svg",
+    "dark": "/logos/eleventy/default.svg"
   },
   "env": {},
   "plugins": []

@@ -17,9 +17,9 @@
     "directory": "out"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/blitz/light.svg",
-    "light": "https://framework-info.netlify.app/logos/blitz/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/blitz/dark.svg"
+    "default": "/logos/blitz/light.svg",
+    "light": "/logos/blitz/light.svg",
+    "dark": "/logos/blitz/dark.svg"
   },
   "env": {},
   "plugins": []

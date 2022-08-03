@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/vite/default.svg",
-    "light": "https://framework-info.netlify.app/logos/vite/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/vite/default.svg"
+    "default": "/logos/vite/default.svg",
+    "light": "/logos/vite/default.svg",
+    "dark": "/logos/vite/default.svg"
   },
   "env": {},
   "plugins": []

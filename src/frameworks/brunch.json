@@ -18,9 +18,9 @@
   },
   "env": {},
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/brunch/default.svg",
-    "light": "https://framework-info.netlify.app/logos/brunch/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/brunch/default.svg"
+    "default": "/logos/brunch/default.svg",
+    "light": "/logos/brunch/default.svg",
+    "dark": "/logos/brunch/default.svg"
   },
   "plugins": []
 }

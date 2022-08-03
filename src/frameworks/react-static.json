@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/react-static/default.png",
-    "light": "https://framework-info.netlify.app/logos/react-static/default.png",
-    "dark": "https://framework-info.netlify.app/logos/react-static/default.png"
+    "default": "/logos/react-static/default.png",
+    "light": "/logos/react-static/default.png",
+    "dark": "/logos/react-static/default.png"
   },
   "env": {},
   "plugins": []

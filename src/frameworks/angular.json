@@ -17,9 +17,9 @@
     "directory": "dist/"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/angular/default.svg",
-    "light": "https://framework-info.netlify.app/logos/angular/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/angular/default.svg"
+    "default": "/logos/angular/default.svg",
+    "light": "/logos/angular/default.svg",
+    "dark": "/logos/angular/default.svg"
   },
   "env": {},
   "plugins": []

@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/gridsome/default.svg",
-    "light": "https://framework-info.netlify.app/logos/gridsome/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/gridsome/dark.svg"
+    "default": "/logos/gridsome/default.svg",
+    "light": "/logos/gridsome/light.svg",
+    "dark": "/logos/gridsome/dark.svg"
   },
   "env": {},
   "plugins": []

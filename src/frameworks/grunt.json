@@ -13,9 +13,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/grunt/default.svg",
-    "light": "https://framework-info.netlify.app/logos/grunt/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/grunt/default.svg"
+    "default": "/logos/grunt/default.svg",
+    "light": "/logos/grunt/default.svg",
+    "dark": "/logos/grunt/default.svg"
   },
   "env": {},
   "plugins": []

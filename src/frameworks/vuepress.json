@@ -17,9 +17,9 @@
     "directory": ".vuepress/dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/vuepress/default.svg",
-    "light": "https://framework-info.netlify.app/logos/vuepress/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/vuepress/default.svg"
+    "default": "/logos/vuepress/default.svg",
+    "light": "/logos/vuepress/default.svg",
+    "dark": "/logos/vuepress/default.svg"
   },
   "env": {},
   "plugins": []

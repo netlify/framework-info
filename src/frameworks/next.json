@@ -17,9 +17,9 @@
     "directory": ".next"
   },
   "logo": {
-    "default":"https://framework-info.netlify.app/logos/nextjs/light.svg",
-    "light":"https://framework-info.netlify.app/logos/nextjs/light.svg",
-    "dark":"https://framework-info.netlify.app/logos/nextjs/dark.svg"
+    "default":"/logos/nextjs/light.svg",
+    "light":"/logos/nextjs/light.svg",
+    "dark":"/logos/nextjs/dark.svg"
   },
   "env": {},
   "plugins": [

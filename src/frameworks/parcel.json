@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/parcel/default.svg",
-    "light": "https://framework-info.netlify.app/logos/parcel/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/parcel/default.svg"
+    "default": "/logos/parcel/default.svg",
+    "light": "/logos/parcel/default.svg",
+    "dark": "/logos/parcel/default.svg"
   },
   "env": {},
   "plugins": []

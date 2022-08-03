@@ -17,9 +17,9 @@
     "directory": "netlify"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/solid-start/default.svg",
-    "light": "https://framework-info.netlify.app/logos/solid-start/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/solid-start/default.svg"
+    "default": "/logos/solid-start/default.svg",
+    "light": "/logos/solid-start/default.svg",
+    "dark": "/logos/solid-start/default.svg"
   },
   "env": {},
   "plugins": []

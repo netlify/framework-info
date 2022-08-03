@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/nuxt/default.svg",
-    "light": "https://framework-info.netlify.app/logos/nuxt/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/nuxt/dark.svg"
+    "default": "/logos/nuxt/default.svg",
+    "light": "/logos/nuxt/light.svg",
+    "dark": "/logos/nuxt/dark.svg"
   },
   "env": {},
   "plugins": []

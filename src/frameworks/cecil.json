@@ -18,9 +18,9 @@
   },
   "env": {},
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/cecil/default.svg",
-    "light": "https://framework-info.netlify.app/logos/cecil/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/cecil/default.svg"
+    "default": "/logos/cecil/default.svg",
+    "light": "/logos/cecil/default.svg",
+    "dark": "/logos/cecil/default.svg"
   },
   "plugins": []
 }

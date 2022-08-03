@@ -17,9 +17,9 @@
     "directory": "www"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/harp/default.svg",
-    "light": "https://framework-info.netlify.app/logos/harp/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/harp/default.svg"
+    "default": "/logos/harp/default.svg",
+    "light": "/logos/harp/default.svg",
+    "dark": "/logos/harp/default.svg"
   },
   "env": {},
   "plugins": []

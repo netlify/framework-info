@@ -17,9 +17,9 @@
     "directory": "__sapper__/export"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/sapper/default.svg",
-    "light": "https://framework-info.netlify.app/logos/sapper/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/sapper/default.svg"
+    "default": "/logos/sapper/default.svg",
+    "light": "/logos/sapper/default.svg",
+    "dark": "/logos/sapper/default.svg"
   },
   "staticAssetsDirectory": "static",
   "env": {},

@@ -17,9 +17,9 @@
     "directory": "public"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/hugo/default.svg",
-    "light": "https://framework-info.netlify.app/logos/hugo/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/hugo/default.svg"
+    "default": "/logos/hugo/default.svg",
+    "light": "/logos/hugo/default.svg",
+    "dark": "/logos/hugo/default.svg"
   },
   "env": {},
   "plugins": []

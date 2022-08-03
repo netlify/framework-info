@@ -17,9 +17,9 @@
     "directory": "dist"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/wmr/default.svg",
-    "light": "https://framework-info.netlify.app/logos/wmr/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/wmr/default.svg"
+    "default": "/logos/wmr/default.svg",
+    "light": "/logos/wmr/default.svg",
+    "dark": "/logos/wmr/default.svg"
   },
   "env": {},
   "plugins": []

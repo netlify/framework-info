@@ -17,9 +17,9 @@
     "directory": "public"
   },
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/phenomic/default.svg",
-    "light": "https://framework-info.netlify.app/logos/phenomic/default.svg",
-    "dark": "https://framework-info.netlify.app/logos/phenomic/default.svg"
+    "default": "/logos/phenomic/default.svg",
+    "light": "/logos/phenomic/default.svg",
+    "dark": "/logos/phenomic/default.svg"
   },
   "env": {},
   "plugins": []

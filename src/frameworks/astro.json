@@ -19,9 +19,9 @@
   "staticAssetsDirectory": "public",
   "env": {},
   "logo": {
-    "default": "https://framework-info.netlify.app/logos/astro/light.svg",
-    "light": "https://framework-info.netlify.app/logos/astro/light.svg",
-    "dark": "https://framework-info.netlify.app/logos/astro/dark.svg"
+    "default": "/logos/astro/light.svg",
+    "light": "/logos/astro/light.svg",
+    "dark": "/logos/astro/dark.svg"
   },
   "plugins": []
 }
