@@ -17,9 +17,9 @@
     "directory": "www"
   },
   "logo": {
-    "default": "/logos/stencil/light.png",
-    "light": "/logos/stencil/light.png",
-    "dark": "/logos/stencil/dark.png"
+    "default": "/logos/stencil/light.svg",
+    "light": "/logos/stencil/light.svg",
+    "dark": "/logos/stencil/dark.svg"
   },
   "env": { "BROWSER": "none", "PORT": "3000" },
   "plugins": []
