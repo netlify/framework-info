@@ -24,7 +24,7 @@
   "env": {},
   "plugins": [
     {
-      "packageName": "@netlify/plugin-nextjs",
+      "packageName": "@netlify/next-runtime",
       "condition": { "minNodeVersion": "10.13.0" }
     }
   ]
