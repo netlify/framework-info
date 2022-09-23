@@ -4,7 +4,7 @@
   "category": "build_tool",
   "detect": {
     "npmDependencies": ["vite"],
-    "excludedNpmDependencies": ["@shopify/hydrogen", "@builderio/qwik", "solid-start"],
+    "excludedNpmDependencies": ["@shopify/hydrogen", "@builder.io/qwik", "solid-start", "solid-js"],
     "configFiles": []
   },
   "dev": {
@@ -15,6 +15,11 @@
   "build": {
     "command": "vite build",
     "directory": "dist"
+  },
+  "logo": {
+    "default": "/logos/vite/default.svg",
+    "light": "/logos/vite/default.svg",
+    "dark": "/logos/vite/default.svg"
   },
   "env": {},
   "plugins": []
