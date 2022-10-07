@@ -1,5 +1,5 @@
 import { fileURLToPath } from 'url'
-import nodePolyfills from 'rollup-plugin-node-polyfills'; 
+import nodePolyfills from 'rollup-plugin-node-polyfills'
 
 const CORE_FILE = fileURLToPath(new URL('src/core.js', import.meta.url))
 
@@ -7,8 +7,8 @@ const CORE_FILE = fileURLToPath(new URL('src/core.js', import.meta.url))
 export default {
   resolve: {
     alias: {
-      path: 'rollup-plugin-node-polyfills/polyfills/path'
-    }
+      path: 'rollup-plugin-node-polyfills/polyfills/path',
+    },
   },
   build: {
     lib: {
@@ -18,10 +18,7 @@ export default {
     },
     sourcemap: true,
     rollupOptions: {
-      plugins: [
-        nodePolyfills()
-      ]
-    }
-  
+      plugins: [nodePolyfills()],
+    },
   },
 }
