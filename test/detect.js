@@ -16,7 +16,7 @@ test('Should detect devDependencies', async (t) => {
 
 test('Should ignore empty framework.npmDependencies', async (t) => {
   const frameworks = await getFrameworks('empty_dependencies')
-  t.is(frameworks.length, 1)
+  t.is(frameworks.length, 2)
 })
 
 test('Should detect any of several framework.npmDependencies', async (t) => {
@@ -31,7 +31,7 @@ test('Should ignore if matching any framework.excludedNpmDependencies', async (t
 
 test('Should detect config files', async (t) => {
   const frameworks = await getFrameworks('config_files')
-  t.is(frameworks.length, 1)
+  t.is(frameworks.length, 2)
 })
 
 if (nodeVersion !== 'v8.3.0') {
