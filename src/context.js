@@ -4,20 +4,20 @@ import isPlainObj from 'is-plain-obj'
 import { locatePath } from 'locate-path'
 import { readPackageUp } from 'read-pkg-up'
 
-const getPackageJson = async (projectDir) => {
+export const getPackageJson = async (projectDir) => {
   try {
     const result = await readPackageUp({ cwd: projectDir, normalize: false })
     if (result === undefined) {
       return {}
     }
 
-    const { packageJson, path: packageJsonPath } = result
+    const { version, packageJson, path: packageJsonPath } = result
 
     if (!isPlainObj(packageJson)) {
       return { packageJsonPath }
     }
 
-    return { packageJson, packageJsonPath }
+    return { version, packageJson, packageJsonPath }
   } catch {
     return {}
   }

@@ -1,4 +1,5 @@
 import pFilter from 'p-filter'
+import 'path'
 
 import { FRAMEWORKS } from '../build/frameworks.js'
 
@@ -7,6 +8,7 @@ import { getDevCommands } from './dev.js'
 import { getPackageJsonContent } from './package.js'
 import { getPlugins } from './plugins.js'
 import { getRunScriptCommand } from './run_script.js'
+import { getPackageJson } from './context.js'
 
 const getContext = (context) => {
   const { pathExists, packageJson, packageJsonPath = '.', nodeVersion } = context
@@ -73,6 +75,11 @@ export const listFrameworks = async function (context) {
     packageJsonPath,
   })
   const frameworks = await pFilter(FRAMEWORKS, (framework) => usesFramework(framework, { pathExists, npmDependencies }))
+  
+  console.log('FRAMEWORKS', frameworks)
+  foobar()
+  // console.log('RESULT', await getPackageJson(path.join(cwd(), "node_modules", 'next')))
+
   const frameworkInfos = frameworks.map((framework) =>
     getFrameworkInfo(framework, { scripts, runScriptCommand, nodeVersion }),
   )
