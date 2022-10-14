@@ -1,4 +1,4 @@
-import { cwd, version } from 'process'
+import { cwd, version as nodejsVersion } from 'process'
 
 import isPlainObj from 'is-plain-obj'
 import { locatePath } from 'locate-path'
@@ -23,7 +23,7 @@ export const getPackageJson = async (projectDir) => {
   }
 }
 
-export const getContext = async ({ projectDir = cwd(), nodeVersion = version } = {}) => {
+export const getContext = async ({ projectDir = cwd(), nodeVersion = nodejsVersion } = {}) => {
   const { packageJson, packageJsonPath = projectDir } = await getPackageJson(projectDir)
   return {
     pathExists: async (path) => (await locatePath([path], { type: 'file', cwd: projectDir })) !== undefined,

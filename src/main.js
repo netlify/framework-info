@@ -1,4 +1,7 @@
-import { getContext } from './context.js'
+import { join } from 'path'
+import { cwd } from 'process'
+
+import { getContext, getPackageJson } from './context.js'
 import { listFrameworks as list, hasFramework as has, getFramework as get } from './core.js'
 
 /**
@@ -20,14 +23,44 @@ import { listFrameworks as list, hasFramework as has, getFramework as get } from
  */
 
 /**
+ * @typedef {object} FrameworkPackage
+ * @property {string} name - The name of the package. e.g: 'gatsby'
+ * @property {string} version - The version of the installed package as found in the package.json. Is set to 'unknown' by default.
+ */
+
+/**
  * @typedef {object} Framework
  * @property {string} id - Id such as `"gatsby"`
  * @property {string} category - Category among `"static_site_generator"`, `"frontend_framework"` and `"build_tool"`
+ * @property {FrameworkPackage} package - Information about the framework's underlying package
  * @property {Dev} dev - Information about the dev command
  * @property {Build} build - Information about the build command
  * @property {object} env - Environment variables that should be set when calling the dev command
  * @property {string[]} plugins - A list of recommend Netlify build plugins to install for the framework
  */
+
+/**
+ * Gets the version of the framework that is installed in a project.
+ *
+ * This cannot currently be used in the browser at this time, which is why it's defined
+ * here rather than in `core.js` as part of the `getFrameworkInfo` method
+ *
+ * @param {string} projectDir - Project directory
+ * @param {Framework} frameworkInfo - Information about the framework as detected by `getFrameworkInfo`
+ *
+ * @returns {Promise<Framework>}
+ */
+const getFrameworkVersion = async (projectDir, frameworkInfo) => {
+  const npmPackage = frameworkInfo.package.name
+  const { packageJson } = await getPackageJson(join(projectDir, 'node_modules', npmPackage))
+  return {
+    ...frameworkInfo,
+    package: {
+      name: frameworkInfo.package.name,
+      version: packageJson.version || 'unknown',
+    },
+  }
+}
 
 /**
  * Return all the frameworks used by a project.
@@ -38,7 +71,16 @@ import { listFrameworks as list, hasFramework as has, getFramework as get } from
  */
 export const listFrameworks = async function (opts) {
   const context = await getContext(opts)
-  return await list(context)
+  const frameworkList = await list(context)
+
+  const projectDir = opts && opts.projectDir ? opts.projectDir : cwd()
+
+  const settledPromises = await Promise.allSettled(
+    frameworkList.map((framework) => getFrameworkVersion(projectDir, framework)),
+  )
+  const updatedList = settledPromises.map((result) => result.value)
+
+  return updatedList
 }
 
 /**
