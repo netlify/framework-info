@@ -13,5 +13,6 @@ cypress/support
 # Local Netlify folder
 .netlify
 
-# This is a mock node_modules folder for testing purposes
+# These are mock node_modules folder for testing purposes
 !test/fixtures/simple/node_modules
+!test/fixtures/multiple/node_modules

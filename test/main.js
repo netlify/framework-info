@@ -17,6 +17,11 @@ test('Should return several items when multiple frameworks are detected', async 
   t.is(frameworks.length, 2)
 })
 
+test('Should return the version of each framework when multiple are detected', async (t) => {
+  const frameworks = await getFrameworks('multiple')
+  t.snapshot(frameworks)
+})
+
 test('Should allow getting a specific framework', async (t) => {
   const framework = await getFramework('simple', 'sapper')
   t.snapshot(framework)
