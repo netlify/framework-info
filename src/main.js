@@ -53,13 +53,7 @@ import { listFrameworks as list, hasFramework as has, getFramework as get } from
  * @returns {Promise<Framework>}
  */
 const getFrameworkVersion = async (projectDir, frameworkInfo) => {
-  const npmPackage = frameworkInfo.package.name
-
-  // Get path of package.json for the installed framework. We need to traverse up the directories
-  // in the event that the project uses something like npm workspaces, and the installed framework package
-  // has been hoisted to the root directory of the project (which differs from the project/application being built)
-
-  // Need to change the CWD to the project directory being built in order to make sure we find and use the correct
+  // Need to change the CWD to the project directory in order to make sure we find and use the correct
   // package.json
   const originalCwd = cwd()
   const returnToOriginalDirectory = () => {
@@ -67,6 +61,11 @@ const getFrameworkVersion = async (projectDir, frameworkInfo) => {
   }
   chdir(projectDir)
 
+  const npmPackage = frameworkInfo.package.name
+
+  // Get path of package.json for the installed framework. We need to traverse up the directories
+  // in the event that the project uses something like npm workspaces, and the installed framework package
+  // has been hoisted to the root directory of the project (which differs from the directory of the project/application being built)
   const installedFrameworkPath = await findUp(join('node_modules', npmPackage, 'package.json'))
   const { packageJson } = await getPackageJson(installedFrameworkPath)
 

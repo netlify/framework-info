@@ -1,6 +1,6 @@
 {
   "name": "@netlify/framework-info",
-  "version": "9.3.1-framework-version-detection.1",
+  "version": "9.3.0",
   "description": "Framework detection utility",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -75,7 +75,6 @@
     "fs-extra": "^10.1.0",
     "is-plain-obj": "^4.0.0",
     "locate-path": "^7.0.0",
-    "node-polyfill-webpack-plugin": "^2.0.1",
     "p-filter": "^3.0.0",
     "p-locate": "^6.0.0",
     "process": "^0.11.10",
