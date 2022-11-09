@@ -3,12 +3,14 @@
   "name": "Remix",
   "category": "static_site_generator",
   "detect": {
-    "npmDependencies": ["remix", "@remix-run/netlify"],
+    "npmDependencies": ["remix", "@remix-run/netlify", "@remix-run/netlify-edge"],
     "excludedNpmDependencies": [],
     "configFiles": ["remix.config.js"]
   },
   "dev": {
-    "command": "remix watch"
+    "command": "remix watch",
+    "port": 3000,
+    "pollingStrategies": [{ "name": "TCP" }, { "name": "HTTP" }]
   },
   "build": {
     "command": "remix build",
