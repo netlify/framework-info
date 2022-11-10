@@ -8,9 +8,7 @@
     "configFiles": ["remix.config.js"]
   },
   "dev": {
-    "command": "remix watch",
-    "port": 3000,
-    "pollingStrategies": [{ "name": "TCP" }, { "name": "HTTP" }]
+    "command": "remix watch"
   },
   "build": {
     "command": "remix build",
