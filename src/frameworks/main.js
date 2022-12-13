@@ -8,6 +8,7 @@ export const FRAMEWORK_NAMES = [
   'docusaurus-v2',
   'eleventy',
   'gatsby',
+  'gatsby5',
   'gridsome',
   'hexo',
   'hugo',

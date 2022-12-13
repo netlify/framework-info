@@ -7,13 +7,19 @@ export const getPackageJsonContent = function ({ packageJson }) {
   }
 
   const npmDependencies = getNpmDependencies(packageJson)
+  const npmDependenciesVersions = getNpmDependenciesVersions(packageJson)
   const scripts = getScripts(packageJson)
-  return { npmDependencies, scripts }
+  return { npmDependencies, npmDependenciesVersions, scripts }
 }
 
 // Retrieve `package.json` `dependencies` and `devDependencies` names
 const getNpmDependencies = function ({ dependencies, devDependencies }) {
   return [...getObjectKeys(dependencies), ...getObjectKeys(devDependencies)]
+}
+
+// Retrieve `package.json` `dependencies` and `devDependencies` versions
+const getNpmDependenciesVersions = function ({ dependencies, devDependencies }) {
+  return { ...devDependencies, ...dependencies }
 }
 
 const getObjectKeys = function (value) {
