@@ -13,7 +13,7 @@
     "pollingStrategies": [{ "name": "TCP" }, { "name": "HTTP" }]
   },
   "build": {
-    "command": "ng build --prod",
+    "command": "ng build --configuration production",
     "directory": "dist/"
   },
   "logo": {
