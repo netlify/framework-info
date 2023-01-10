@@ -83,7 +83,7 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@netlify/eslint-config-node": "^6.0.0",
+    "@netlify/eslint-config-node": "^7.0.1",
     "ava": "^4.0.0",
     "babel-loader": "^8.2.2",
     "c8": "^7.11.0",
