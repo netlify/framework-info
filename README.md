@@ -1,8 +1,7 @@
 > # **Important Notice**
 >
-> This repository was moved into the mono repository of [github.com/netlify/build](https://github.com/netlify/build)
-> The package name and the versions are preserved!
-
+> This repository was moved into the mono repository of [github.com/netlify/build](https://github.com/netlify/build) The
+> package name and the versions are preserved!
 
 [![npm version](https://img.shields.io/npm/v/@netlify/framework-info.svg)](https://npmjs.org/package/@netlify/framework-info)
 [![Coverage Status](https://codecov.io/gh/netlify/framework-info/branch/main/graph/badge.svg)](https://codecov.io/gh/netlify/framework-info)
