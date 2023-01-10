@@ -49,3 +49,15 @@ if (nodeVersion === 'v8.3.0') {
     t.is(frameworks[0].plugins.length, 0)
   })
 }
+
+test('Should detect specific version of dependencies', async (t) => {
+  const frameworks = await getFrameworks('gatsby5')
+  t.is(frameworks.length, 1)
+  t.is(frameworks[0].id, 'gatsby5')
+})
+
+test('Should not detect specific version of dependencies if version does not match', async (t) => {
+  const frameworks = await getFrameworks('gatsby4')
+  t.is(frameworks.length, 1)
+  t.is(frameworks[0].id, 'gatsby')
+})

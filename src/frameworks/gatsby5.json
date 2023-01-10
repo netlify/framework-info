@@ -1,9 +1,9 @@
 {
-  "id": "gatsby",
-  "name": "Gatsby",
+  "id": "gatsby5",
+  "name": "Gatsby 5",
   "category": "static_site_generator",
   "detect": {
-    "npmDependencies": [{ "name": "gatsby", "version": "<5.0.0" }],
+    "npmDependencies": [{ "name": "gatsby", "version": ">=5.0.0" }],
     "excludedNpmDependencies": [],
     "configFiles": ["gatsby-config.js"]
   },
@@ -20,8 +20,8 @@
   "env": {
     "GATSBY_LOGGER": "yurnalist",
     "GATSBY_PRECOMPILE_DEVELOP_FUNCTIONS": "true",
-    "AWS_LAMBDA_JS_RUNTIME": "nodejs14.x",
-    "NODE_VERSION": "14"
+    "AWS_LAMBDA_JS_RUNTIME": "nodejs18.x",
+    "NODE_VERSION": "18"
   },
   "logo": {
     "default": "/logos/gatsby/default.svg",

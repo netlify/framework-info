@@ -67,12 +67,14 @@ const getContext = (context) => {
  */
 export const listFrameworks = async function (context) {
   const { pathExists, packageJson, packageJsonPath, nodeVersion } = getContext(context)
-  const { npmDependencies, scripts, runScriptCommand } = await getProjectInfo({
+  const { npmDependencies, npmDependenciesVersions, scripts, runScriptCommand } = await getProjectInfo({
     pathExists,
     packageJson,
     packageJsonPath,
   })
-  const frameworks = await pFilter(FRAMEWORKS, (framework) => usesFramework(framework, { pathExists, npmDependencies }))
+  const frameworks = await pFilter(FRAMEWORKS, (framework) =>
+    usesFramework(framework, { pathExists, npmDependencies, npmDependenciesVersions }),
+  )
   const frameworkInfos = frameworks.map((framework) =>
     getFrameworkInfo(framework, { scripts, runScriptCommand, nodeVersion }),
   )
@@ -90,8 +92,12 @@ export const listFrameworks = async function (context) {
 export const hasFramework = async function (frameworkId, context) {
   const framework = getFrameworkById(frameworkId)
   const { pathExists, packageJson, packageJsonPath } = getContext(context)
-  const { npmDependencies } = await getProjectInfo({ pathExists, packageJson, packageJsonPath })
-  const result = await usesFramework(framework, { pathExists, npmDependencies })
+  const { npmDependencies, npmDependenciesVersions } = await getProjectInfo({
+    pathExists,
+    packageJson,
+    packageJsonPath,
+  })
+  const result = await usesFramework(framework, { pathExists, npmDependencies, npmDependenciesVersions })
   return result
 }
 
@@ -131,11 +137,12 @@ const getFrameworkId = function ({ id }) {
 }
 
 const getProjectInfo = async function ({ pathExists, packageJson, packageJsonPath }) {
-  const { npmDependencies, scripts } = await getPackageJsonContent({
+  const { npmDependencies, npmDependenciesVersions, scripts } = getPackageJsonContent({
     packageJson,
   })
   const runScriptCommand = await getRunScriptCommand({ pathExists, packageJsonPath })
-  return { npmDependencies, scripts, runScriptCommand }
+
+  return { npmDependencies, npmDependenciesVersions, scripts, runScriptCommand }
 }
 
 const getFrameworkInfo = function (
@@ -155,11 +162,12 @@ const getFrameworkInfo = function (
 ) {
   const devCommands = getDevCommands({ frameworkDevCommand, scripts, runScriptCommand })
   const recommendedPlugins = getPlugins(plugins, { nodeVersion })
+
   return {
     id,
     name,
     package: {
-      name: detect.npmDependencies[0],
+      name: typeof detect.npmDependencies[0] === 'string' ? detect.npmDependencies[0] : detect.npmDependencies[0]?.name,
       version: 'unknown',
     },
     category,

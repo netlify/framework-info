@@ -70,7 +70,17 @@ const FRAMEWORK_JSON_SCHEMA = {
       properties: {
         npmDependencies: {
           type: 'array',
-          items: { type: 'string', minLength: 1 },
+          items: {
+            anyOf: [
+              { type: 'string', minLength: 1 },
+              {
+                type: 'object',
+                required: ['name'],
+                additionalProperties: false,
+                properties: { name: { type: 'string', minLength: 1 }, version: { type: 'string', minLength: 1 } },
+              },
+            ],
+          },
         },
         excludedNpmDependencies: {
           type: 'array',
