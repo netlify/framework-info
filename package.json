@@ -72,7 +72,7 @@
     "ajv": "^8.0.0",
     "filter-obj": "^3.0.0",
     "find-up": "^6.3.0",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.0.0",
     "is-plain-obj": "^4.0.0",
     "locate-path": "^7.0.0",
     "p-filter": "^3.0.0",
